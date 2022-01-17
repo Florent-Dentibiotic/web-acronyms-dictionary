@@ -6,15 +6,35 @@ Get the definitions and resources of the many acronyms of the web development wo
 
 WIP
 
+## Built With
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vitest](https://vitest.dev/)
+- [Sass](https://sass-lang.com/)
+
 ## Getting Started
-
-### Dependencies
-
-WIP
 
 ### Installing
 
-WIP
+Install Dependencies
+
+```bash
+npm install
+```
+
+Launch local server
+
+```bash
+npm run dev
+```
+
+Launch tests
+
+```bash
+npm run test
+```
 
 ## Contributing
 
