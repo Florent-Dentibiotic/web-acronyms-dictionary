@@ -1,0 +1,43 @@
+#root {
+  min-height: 100vh;
+  display: grid;
+  padding: 3rem;
+  align-content: flex-start;
+  gap: 3rem;
+}
+
+label {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::placeholder {
+  color: inherit;
+  font-family: inherit;
+}
+
+input[type='search'] {
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+form {
+  justify-self: center;
+  text-align: center;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  width: 400px;
+}
+
+article {
+  font-size: 2rem;
+}
