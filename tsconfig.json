@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -15,7 +15,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["vitest/global"]
+    "baseUrl": "src",
+    "types": ["vite/client"],
+    "paths": {
+      "@common": ["modules/common"],
+      "@layout": ["layout"],
+      "@home": ["modules/home"],
+      "@result": ["modules/result"],
+      "@meta": ["modules/meta"],
+      "@data": ["data"],
+      "@services": ["services"]
+    }
   },
-  "include": ["./src"]
+  "include": ["src", "vite.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

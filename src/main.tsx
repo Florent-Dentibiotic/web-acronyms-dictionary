@@ -1,11 +1,35 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-import './sass/main.scss'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import worker from 'mocks/browser';
+import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import App from './App';
+import './style.css';
 
-ReactDOM.render(
+// MSW WORKER
+worker.start({
+  onUnhandledRequest: 'bypass',
+});
+
+// React Query Client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true,
+      useErrorBoundary: true,
+      refetchOnWindowFocus: false,
+      staleTime: Infinity,
+      retry: false,
+    },
+  },
+});
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>,
-  document.getElementById('root')
-)
+);
