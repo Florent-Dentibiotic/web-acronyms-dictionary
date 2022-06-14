@@ -44,6 +44,10 @@ npm run test
 - Push your work to your fork
 - Submit a Pull request
 
+## Feedback
+
+Have an idea, suggestion or observed an unintended behaviour ? Check the [issues](https://github.com/Allandrow/web-acronyms-dictionary/issues) and if the topic you're concerned about isn't already mentioned, feel free to add it to the list !
+
 ## License
 
 [MIT](https://github.com/Allandrow/web-acronyms-dictionary/blob/main/LICENSE) License © 2022-Present [Cyril Tiger](https://github.com/Allandrow)
